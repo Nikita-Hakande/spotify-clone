@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spotify - Your favourite music is here</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <!-- NAVBAR -->
+    <nav>
+      <ul>
+        <li class="brand">
+          <img src="logo.jpeg" alt="Spotify" />
+          Spotify
+        </li>
+        <li>Home</li>
+        <li>About</li>
+      </ul>
+    </nav>
+
+    <!-- MAIN CONTAINER -->
+    <div class="container">
+      <div class="songList">
+        <h1>Best of NCS - No Copyright Sounds</h1>
+
+        <!-- SEARCH -->
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Search songs..."
+          class="searchBar"
+        />
+
+        <!-- SONG ITEMS -->
+
+        <!-- Song 1 -->
+        <div class="songItem">
+          <img src="covers/1.png" />
+          <span class="songName">Warriyo - Mortals</span>
+          <span class="songlistplay">
+            05:34
+            <i class="fa-solid fa-heart favorite"></i>
+            <i class="fa-regular fa-circle-play songItemPlay" id="0"></i>
+          </span>
+        </div>
+
+        <!-- Song 2 -->
+        <div class="songItem">
+          <img src="covers/2.png" />
+          <span class="songName">Cielo - Huma-Huma</span>
+          <span class="songlistplay">
+            04:22
+            <i class="fa-solid fa-heart favorite"></i>
+            <i class="fa-regular fa-circle-play songItemPlay" id="1"></i>
+          </span>
+        </div>
+
+        <!-- Song 3 -->
+        <div class="songItem">
+          <img src="covers/3.png" />
+          <span class="songName">DEAF KEV - Invincible</span>
+          <span class="songlistplay">
+            04:33
+            <i class="fa-solid fa-heart favorite"></i>
+            <i class="fa-regular fa-circle-play songItemPlay" id="2"></i>
+          </span>
+        </div>
+
+        <!-- Song 4 -->
+        <div class="songItem">
+          <img src="covers/4.png" />
+          <span class="songName">My Heart - Different Heaven</span>
+          <span class="songlistplay">
+            03:45
+            <i class="fa-solid fa-heart favorite"></i>
+            <i class="fa-regular fa-circle-play songItemPlay" id="3"></i>
+          </span>
+        </div>
+
+        <!-- Song 5 -->
+        <div class="songItem">
+          <img src="covers/5.png" />
+          <span class="songName">Heroes Tonight - Janji</span>
+          <span class="songlistplay">
+            03:29
+            <i class="fa-solid fa-heart favorite"></i>
+            <i class="fa-regular fa-circle-play songItemPlay" id="4"></i>
+          </span>
+        </div>
+
+        <!-- Song 6 -->
+        <div class="songItem">
+          <img src="covers/6.png" />
+          <span class="songName">Rabba - Salam-e-Ishq</span>
+          <span class="songlistplay">
+            04:15
+            <i class="fa-solid fa-heart favorite"></i>
+            <i class="fa-regular fa-circle-play songItemPlay" id="5"></i>
+          </span>
+        </div>
+
+        <!-- Song 7 -->
+        <div class="songItem">
+          <img src="covers/7.png" />
+          <span class="songName">Sakhiyaan - Salam-e-Ishq</span>
+          <span class="songlistplay">
+            03:58
+            <i class="fa-solid fa-heart favorite"></i>
+            <i class="fa-regular fa-circle-play songItemPlay" id="6"></i>
+          </span>
+        </div>
+
+        <!-- Song 8 -->
+        <div class="songItem">
+          <img src="covers/8.png" />
+          <span class="songName">Bhula Dena - Salam-e-Ishq</span>
+          <span class="songlistplay">
+            04:10
+            <i class="fa-solid fa-heart favorite"></i>
+            <i class="fa-regular fa-circle-play songItemPlay" id="7"></i>
+          </span>
+        </div>
+
+        <!-- Song 9 -->
+        <div class="songItem">
+          <img src="covers/9.png" />
+          <span class="songName">Tumhari Kasam - Salam-e-Ishq</span>
+          <span class="songlistplay">
+            04:40
+            <i class="fa-solid fa-heart favorite"></i>
+            <i class="fa-regular fa-circle-play songItemPlay" id="8"></i>
+          </span>
+        </div>
+
+        <!-- Song 10 -->
+        <div class="songItem">
+          <img src="covers/10.png" />
+          <span class="songName">Na Jaana - Salam-e-Ishq</span>
+          <span class="songlistplay">
+            03:50
+            <i class="fa-solid fa-heart favorite"></i>
+            <i class="fa-regular fa-circle-play songItemPlay" id="9"></i>
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <!-- BOTTOM PLAYER -->
+    <div class="bottom">
+      <input type="range" id="myProgressBar" min="0" max="100" />
+
+      <div class="icons">
+        <i class="fa-solid fa-shuffle" id="shuffle"></i>
+        <i class="fa-solid fa-backward-step" id="previous"></i>
+        <i class="fa-regular fa-circle-play" id="masterPlay"></i>
+        <i class="fa-solid fa-forward-step" id="next"></i>
+        <i class="fa-solid fa-repeat" id="repeat"></i>
+      </div>
+    </div>
+
+    <!-- JS -->
+    <script src="script.js"></script>
+  </body>
+</html>

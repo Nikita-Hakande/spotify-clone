@@ -1,0 +1,307 @@
+@import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BODY */
+body {
+  background-color: black;
+  color: white;
+  font-family: "Varela Round", sans-serif;
+}
+
+/* NAVBAR */
+nav ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  height: 65px;
+  background-color: black;
+  padding: 0 20px;
+}
+
+nav ul li {
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.brand img {
+  width: 44px;
+  margin-right: 10px;
+}
+
+/* MAIN CONTAINER */
+.container {
+  min-height: 72vh;
+  width: 75%;
+  margin: 25px auto;
+  background-color: #121212;
+  padding: 25px;
+  border-radius: 12px;
+}
+
+/* TITLE */
+.container h1 {
+  margin-bottom: 25px;
+}
+
+/* SONG LIST */
+.songItemContainer {
+  margin-top: 20px;
+}
+
+.songItem {
+  height: 55px;
+  display: flex;
+  align-items: center;
+  background-color: white;
+  color: black;
+  margin-bottom: 12px;
+  border-radius: 35px;
+  padding: 0 15px;
+  justify-content: space-between;
+}
+
+.songItem img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+}
+
+.songName {
+  flex: 1;
+  margin-left: 15px;
+  font-size: 15px;
+}
+
+/* TIMESTAMP */
+.timestamp {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.timestamp i {
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/* PLAYER BAR */
+.bottom {
+  position: sticky;
+  bottom: 0;
+  height: 120px;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* PROGRESS BAR */
+#myProgressBar {
+  width: 80%;
+  cursor: pointer;
+}
+
+/* PLAYER ICONS */
+.icons {
+  margin-top: 12px;
+}
+
+.icons i {
+  font-size: 32px;
+  margin: 0 15px;
+  cursor: pointer;
+}
+
+/* SONG INFO */
+.songInfo {
+  position: absolute;
+  left: 10%;
+  bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.songInfo img {
+  opacity: 0;
+  transition: opacity 0.4s ease-in;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .container {
+    width: 95%;
+  }
+
+  .songInfo {
+    left: 5%;
+  }
+}
+/* FIX RANGE BAR LOOK */
+#myProgressBar {
+  -webkit-appearance: none;
+  width: 80%;
+  height: 5px;
+  background: #4caf50;
+  border-radius: 10px;
+  outline: none;
+}
+
+#myProgressBar::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  background: white;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.songItemContainer {
+  margin-top: 20px;
+  max-height: 50vh;
+  overflow-y: auto;
+  padding-right: 10px;
+}
+
+/* scrollbar style (optional but nice) */
+.songItemContainer::-webkit-scrollbar {
+  width: 6px;
+}
+.songItemContainer::-webkit-scrollbar-thumb {
+  background-color: #1db954;
+  border-radius: 10px;
+}
+#myProgressBar {
+  -webkit-appearance: none;
+  width: 80%;
+  height: 5px;
+  background: #1db954;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+#myProgressBar::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 14px;
+  height: 14px;
+  background: white;
+  border-radius: 50%;
+}
+/* Highlight currently playing song */
+.songItem.active {
+  background-color: #1db954;
+  color: black;
+}
+
+.songItem.active .songName {
+  font-weight: bold;
+}
+
+.songItem.active i {
+  color: black;
+}
+.songItem.active {
+  background-color: #1db954;
+  color: black;
+}
+/* Hover effect for song items */
+.songItem {
+  transition: all 0.25s ease;
+}
+
+.songItem:hover {
+  transform: scale(1.02);
+}
+
+/* Hide play icon by default */
+.songItem .songItemPlay {
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+/* Show play icon on hover */
+.songItem:hover .songItemPlay {
+  opacity: 1;
+}
+
+/* Keep play icon visible for active song */
+.songItem.active .songItemPlay {
+  opacity: 1;
+}
+.searchBar {
+  width: 100%;
+  padding: 10px 15px;
+  margin: 15px 0 25px 0;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+}
+.icons i {
+  cursor: pointer;
+  margin: 0 10px;
+}
+
+.icons i.active {
+  color: #1db954;
+}
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+  .container {
+    width: 95%;
+    padding: 10px;
+  }
+
+  .songItem {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+
+  .songItem img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .icons i {
+    font-size: 20px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .searchBar {
+    font-size: 14px;
+  }
+
+  .songName {
+    font-size: 14px;
+  }
+}
+.favorite {
+  color: gray;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.favorite.active {
+  color: red;
+}
